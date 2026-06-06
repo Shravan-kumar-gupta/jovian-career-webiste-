@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Careers</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <style>
+        #banner{
+            height: 360px;
+            width: 100%;
+            object-fit: cover;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="text-center mt-2 mb-4">{{company_name}} Careers</h1>
+      <img
+        class="img-fluid"
+        id="banner"
+        src="http://127.0.0.1:5000/static/banner.png"
+        alt=""
+      />
+      <h2 class="text-center mt-2 mb-4">About Jovian</h2>
+      <p class="bodyText lead">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni voluptas
+        corporis veniam dolorum, non consectetur asperiores explicabo quisquam
+        aspernatur perspiciatis doloremque voluptatibus eligendi doloribus.
+        Nesciunt earum iste aliquam autem et. Lorem ipsum dolor sit amet
+        consectetur adipisicing elit. Magni voluptas corporis veniam dolorum,
+        non consectetur asperiores explicabo quisquam aspernatur perspiciatis
+        doloremque voluptatibus eligendi doloribus. Nesciunt earum iste aliquam
+        autem et.
+      </p>
+      <h2 class="text-center mt-2 mb-4">Open Positions</h2>
+      <div>
+         {% for job in jobs %}
+            {% include 'jobItem.html' %}
+         {% endfor %}
+      </div>
+      <div class="text-center">
+        <button class="btn btn-primary btn-lg">Contact Us</button>
+        <p class="mt-4">Copyright 2026,Jovian</p>
+      </div>
+    </div>
+  </body>
+</html>
